@@ -31,6 +31,7 @@
 		6C90A1AC1A82A10600EC32CC /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C90A1A71A82A10600EC32CC /* ParseFacebookUtils.framework */; };
 		6C90A1AD1A82A10600EC32CC /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C90A1A81A82A10600EC32CC /* ParseUI.framework */; };
 		6C90A1B21A82DAEA00EC32CC /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C90A1B11A82DAEA00EC32CC /* libsqlite3.0.dylib */; };
+		6CE61A051A83CB21004C0A5E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE61A041A83CB21004C0A5E /* AccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +72,9 @@
 		6C90A1A61A82A10600EC32CC /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
 		6C90A1A71A82A10600EC32CC /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		6C90A1A81A82A10600EC32CC /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
-		6C90A1AE1A82AE3200EC32CC /* benji-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "benji-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		6C90A1B11A82DAEA00EC32CC /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		6CE61A041A83CB21004C0A5E /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		6CE61A061A83CBCA004C0A5E /* benji-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "benji-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +137,7 @@
 			children = (
 				6C90A16A1A829F6700EC32CC /* AppDelegate.swift */,
 				6C90A16C1A829F6700EC32CC /* ViewController.swift */,
-				6C90A1AE1A82AE3200EC32CC /* benji-Bridging-Header.h */,
+				6CE61A041A83CB21004C0A5E /* AccountViewController.swift */,
 				6C90A16E1A829F6700EC32CC /* Main.storyboard */,
 				6C90A1711A829F6700EC32CC /* Images.xcassets */,
 				6C90A1731A829F6700EC32CC /* LaunchScreen.xib */,
@@ -147,6 +149,7 @@
 		6C90A1681A829F6700EC32CC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6CE61A061A83CBCA004C0A5E /* benji-Bridging-Header.h */,
 				6C90A1691A829F6700EC32CC /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -304,6 +307,7 @@
 			files = (
 				6C90A16D1A829F6700EC32CC /* ViewController.swift in Sources */,
 				6C90A16B1A829F6700EC32CC /* AppDelegate.swift in Sources */,
+				6CE61A051A83CB21004C0A5E /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +512,7 @@
 				6C90A1861A829F6700EC32CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C90A1871A829F6700EC32CC /* Build configuration list for PBXNativeTarget "benjiTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +521,7 @@
 				6C90A1891A829F6700EC32CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

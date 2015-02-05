@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
 
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Savings"
@@ -33,10 +35,30 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             
         } else {
             var username = PFUser.currentUser().username
-            
+            welcomeLabel.text = username
         }
     }
+    
+    func signUpViewController(signUpController: PFSignUpViewController!, didSignUpUser user: PFUser!) {
+        var account = PFObject(className: "transactions")
+        account["accountholder"] = PFUser.currentUser()
+        user.saveInBackgroundWithBlock{(success:Bool!, error:NSError!) -> Void in
+            if success != nil {
+                NSLog("Success")
+                self.dismissViewControllerAnimated(true, completion: nil)
+            } else {
+                NSLog("%@", error)
+            }
+        }
+    }
+    
+    func logInViewController(logInController: PFLogInViewController!, didLogInUser user: PFUser!) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
-
+    func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController!) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
 
